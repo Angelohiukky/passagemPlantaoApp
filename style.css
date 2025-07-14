@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #0056b3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px); /* Ajusta a largura para considerar o padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.chamado-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.chamado-item label {
+    flex: 1; /* Ocupa o espaço restante */
+    margin-right: 10px;
+    margin-bottom: 0; /* Remove a margem inferior padrão da label */
+}
+
+.chamado-item input[type="number"] {
+    width: 60px; /* Largura menor para o campo de número */
+    text-align: center;
+    margin-right: 5px;
+    padding: 8px;
+}
+
+.chamado-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.chamado-item button:hover {
+    background-color: #0056b3;
+}
+
+#gerarRelatorioBtn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.2s;
+}
+
+#gerarRelatorioBtn:hover {
+    background-color: #218838;
+}
+/* ... código CSS existente ... */
+
+input[type="text"],
+input[type="date"], /* JÚNIOR: Adicionado estilo para input[type="date"] */
+textarea,
+select { /* JÚNIOR: Adicionado estilo para select */
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* ... restante do código CSS ... */
