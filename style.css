@@ -1,35 +1,40 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Cor de fundo padrão (claro) */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    color: #333; /* Cor do texto padrão (claro) */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
 }
 
 .container {
-    background-color: #fff;
+    background-color: #fff; /* Cor de fundo do container padrão (claro) */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 900px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #333; /* Cor do título padrão (claro) */
     margin-bottom: 25px;
+    transition: color 0.3s;
 }
 
 h2 {
-    color: #555;
+    color: #555; /* Cor do subtítulo padrão (claro) */
     margin-top: 20px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee; /* Borda padrão (claro) */
     padding-bottom: 5px;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 .section {
@@ -40,7 +45,8 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #444;
+    color: #444; /* Cor do label padrão (claro) */
+    transition: color 0.3s;
 }
 
 input[type="text"],
@@ -50,10 +56,13 @@ select {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Borda do input padrão (claro) */
     border-radius: 4px;
     font-size: 1em;
     box-sizing: border-box;
+    background-color: #fff; /* Fundo do input padrão (claro) */
+    color: #333; /* Texto do input padrão (claro) */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 textarea {
@@ -70,7 +79,7 @@ button {
     font-size: 1.1em;
     margin-top: 20px;
     width: 100%;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.3s;
 }
 
 button:hover {
@@ -102,6 +111,15 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    /* Estilos de botão específicos para modo claro/escuro */
+    background-color: #e0e0e0; /* Cor de fundo dos botões +/- padrão (claro) */
+    color: #333; /* Cor do texto dos botões +/- padrão (claro) */
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.chamado-item button:hover {
+    background-color: #d0d0d0;
 }
 
 .chamado-item input[type="number"] {
@@ -110,6 +128,11 @@ button:hover {
     margin: 0;
     padding: 5px;
     flex-shrink: 0;
+    /* Estilos de input de número específicos para modo claro/escuro */
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 /* Estilos para as seções de chamados lado a lado */
@@ -124,9 +147,10 @@ button:hover {
     flex: 1;
     min-width: 350px;
     padding: 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e0e0e0; /* Borda da caixa de chamados padrão (claro) */
     border-radius: 8px;
-    background-color: #fdfdfd;
+    background-color: #fdfdfd; /* Fundo da caixa de chamados padrão (claro) */
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .chamados-box h2 {
@@ -144,6 +168,101 @@ button:hover {
 .header-item {
     flex: 1; /* Faz com que cada item (data e técnico) ocupe o espaço igualmente */
     min-width: 250px; /* Largura mínima para cada item */
+}
+
+/* Estilos para o botão de alternar modo escuro */
+.dark-mode-toggle-btn {
+    background-color: #4e4e4e; /* Cinza para o botão de alternar */
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    width: auto; /* Para que o botão não ocupe 100% da largura */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block; /* Para centralizar ou alinhar, se necessário */
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dark-mode-toggle-btn:hover {
+    background-color: #5a6268;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ESTILOS PARA O MODO ESCURO */
+/* ---------------------------------------------------------------------- */
+body.dark-mode {
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .container {
+    background-color: #3a3a3a; /* Fundo do container mais escuro */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h1 {
+    color: #ffffff; /* Título mais claro */
+}
+
+body.dark-mode h2 {
+    color: #cccccc; /* Subtítulo mais claro */
+    border-bottom-color: #555; /* Borda mais clara */
+}
+
+body.dark-mode label {
+    color: #bbbbbb; /* Label mais claro */
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #4a4a4a; /* Fundo do input mais escuro */
+    color: #e0e0e0; /* Texto do input mais claro */
+    border-color: #666; /* Borda do input mais clara */
+}
+
+body.dark-mode button {
+    background-color: #0056b3; /* Cor do botão ajustada para o modo escuro */
+    color: #ffffff;
+}
+
+body.dark-mode button:hover {
+    background-color: #003d82;
+}
+
+body.dark-mode .chamado-item button {
+    background-color: #555; /* Cor dos botões +/- no modo escuro */
+    color: #eee;
+    border-color: #777;
+}
+
+body.dark-mode .chamado-item button:hover {
+    background-color: #666;
+}
+
+body.dark-mode .chamado-item input[type="number"] {
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+    border-color: #666;
+}
+
+body.dark-mode .chamados-box {
+    background-color: #444444; /* Fundo da caixa de chamados mais escuro */
+    border-color: #666666; /* Borda da caixa de chamados mais clara */
+}
+
+body.dark-mode .dark-mode-toggle-btn {
+    background-color: #4e565f; /* Cor do botão de alternar no modo escuro */
+}
+
+body.dark-mode .dark-mode-toggle-btn:hover {
+    background-color: #3b4249;
 }
 
 /* Media Queries para telas menores */

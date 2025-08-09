@@ -207,4 +207,40 @@ ${movimentacaoEstoque || " "}
 
         alert('Redirecionando para o WhatsApp com o relatório pronto para envio!');
     });
+
+    // ----------------------------------------------------------------------
+    // LÓGICA DO MODO ESCURO
+    // ----------------------------------------------------------------------
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Verifica a preferência do usuário no localStorage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+        if (currentTheme === 'dark-mode') {
+            darkModeToggle.textContent = 'Modo Claro';
+        } else {
+            darkModeToggle.textContent = 'Modo Escuro';
+        }
+    } else {
+        // Define o tema padrão como claro se não houver preferência salva
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', '');
+        darkModeToggle.textContent = 'Modo Escuro';
+    }
+
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Salva a preferência do usuário no localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark-mode');
+            darkModeToggle.textContent = 'Modo Claro';
+        } else {
+            localStorage.setItem('theme', ''); // Remove a classe ou define como vazio para modo claro
+            darkModeToggle.textContent = 'Modo Escuro';
+        }
+    });
 });
