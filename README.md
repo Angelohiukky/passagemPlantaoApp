@@ -1,71 +1,95 @@
-Passagem de Plantão App
-O Passagem de Plantão App é uma aplicação de desktop simples, desenvolvida para padronizar e agilizar a criação de relatórios de passagem de plantão para técnicos. Com uma interface intuitiva, o usuário pode preencher as informações do seu turno e gerar um arquivo de texto (.txt) formatado, pronto para ser compartilhado e arquivado.
+## 📝 Gerador de Relatório de Plantão
+Uma aplicação de desktop simples e eficiente, construída com Electron, para padronizar e agilizar a criação de relatórios de passagem de plantão.
 
-A aplicação foi construída utilizando Electron, o que a torna compatível com diversos sistemas operacionais.
+## 🖼️ Visão Geral
+O objetivo desta aplicação é fornecer aos técnicos uma ferramenta intuitiva para registrar as atividades do seu turno de trabalho. Com um formulário estruturado, o utilizador pode documentar agendamentos, tarefas, pendências e a movimentação de chamados, gerando ao final um arquivo .txt formatado e pronto para ser compartilhado.
 
+## ✨ Funcionalidades
+Formulário Intuitivo: Interface limpa e organizada para preenchimento rápido das informações.
 
-✨ Funcionalidades Principais
-Formulário Estruturado: Preencha campos específicos para cada tipo de informação relevante ao plantão, como agendamentos, tarefas, pendências e mais.
+Data Automática: O campo de data já vem preenchido com o dia atual.
 
-Contagem de Chamados: Adicione e remova facilmente a contagem de chamados abertos e fechados para diversas unidades pré-definidas.
+Contador de Chamados: Adicione ou remova facilmente a contagem de chamados abertos e fechados por unidade.
 
-Data Automática: O campo de data é preenchido automaticamente com o dia atual para maior conveniência.
+Geração de Relatório: Crie um relatório de texto (.txt) padronizado com um único clique.
 
-Seleção de Técnico e Turno: Escolha o técnico e o período do plantão (Diurno/Noturno) em menus de seleção.
+Download Automático: O arquivo gerado é nomeado com a data atual e baixado automaticamente.
 
-Geração de Relatório: Com um único clique, a aplicação compila todas as informações em um relatório de texto bem formatado.
+## 🛠️ Tecnologias Utilizadas
+Este projeto foi construído utilizando as seguintes tecnologias:
 
-Download Automático: O relatório gerado é baixado automaticamente como um arquivo .txt, nomeado com a data atual para fácil organização.
+Electron: Framework para criar aplicações de desktop com tecnologias web.
 
-🚀 Tecnologias Utilizadas
-O projeto foi desenvolvido com as seguintes tecnologias:
+HTML5: Linguagem de marcação para a estrutura da interface.
 
-Electron: Para a criação da aplicação de desktop multiplataforma.
+CSS3: Folhas de estilo para o design visual da aplicação.
 
-HTML5: Para a estrutura da interface do usuário.
+JavaScript: Linguagem de programação para a lógica e interatividade.
 
-CSS3: Para a estilização e o design da aplicação.
-
-JavaScript: Para toda a lógica de funcionamento, interatividade e manipulação dos dados.
-
-🔧 Como Utilizar
-Para executar o projeto em seu ambiente de desenvolvimento, siga os passos abaixo.
+## 🚀 Como Começar
+Siga os passos abaixo para configurar e executar o projeto no seu ambiente de desenvolvimento.
 
 Pré-requisitos
-Node.js instalado.
+Certifique-se de que tem o Node.js (que inclui o npm) instalado na sua máquina.
 
-Git instalado (para clonar o repositório).
+Para verificar a versão do Node.js: node -v
 
-Passos
+Para verificar a versão do npm: npm -v
+
+Instalação
 Clone o repositório:
 
-Bash
+```` git clone [https://github.com/angelohiukky/passagemplantaoapp.git](https://github.com/angelohiukky/passagemplantaoapp.git) ````
 
-git clone <URL_DO_SEU_REPOSITORIO>
-cd passagemPlantaoApp
-Instale as dependências:
-O projeto não inclui um package.json, mas em um projeto Electron típico, você instalaria as dependências com:
+Navegue até o diretório do projeto:
 
-Bash
+```` cd passagemplantaoapp ````
 
-npm install
+Inicie um arquivo package.json (caso o projeto não tenha um):
+
+```` npm init -y ````
+
+Instale o Electron como uma dependência de desenvolvimento:
+
+```` npm install --save-dev electron ````
+
+Configure o script de inicialização:
+Abra o arquivo package.json e, dentro do objeto "scripts", adicione a seguinte linha:
+
+"start": "electron ."
+
 Execute a aplicação:
-Para iniciar uma aplicação Electron, o comando padrão é:
 
-Bash
+```` npm start ````
 
-npm start
-Preencha e Gere o Relatório:
+## 👨‍💻 Como Usar
+Após iniciar a aplicação, siga estes passos:
 
-Abra a aplicação.
+Selecione a Data: O campo já estará preenchido com a data atual, mas pode ser alterado se necessário.
 
-Preencha todos os campos do formulário com as informações do seu plantão.
+Escolha o Técnico e o Turno: Utilize os menus de seleção.
 
-Clique no botão "Gerar e Baixar Relatório .txt" no final da página.
+Preencha os Campos: Descreva os agendamentos, tarefas, pendências e outras atividades nos campos de texto.
 
-O arquivo será salvo automaticamente na sua pasta de downloads.
+Contabilize os Chamados: Utilize os botões +1 e -1 para ajustar a quantidade de chamados abertos e fechados para cada unidade.
 
-📝 Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Gere o Relatório: Clique no botão "Gerar e Baixar Relatório .txt". O arquivo será salvo automaticamente na sua pasta de downloads.
 
-Copyright (c) 2025 Rodrigo Angelo Evangelista.
+## 🤝 Como Contribuir
+Contribuições são o que tornam a comunidade de código aberto um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será muito apreciada.
+
+Faça um Fork do Projeto
+
+Crie a sua Feature Branch (git checkout -b feature/AmazingFeature)
+
+Faça o Commit das suas alterações (git commit -m 'Add some AmazingFeature')
+
+Faça o Push para a Branch (git push origin feature/AmazingFeature)
+
+Abra um Pull Request
+
+## 📝 Licença
+Este projeto está distribuído sob a Licença MIT. Veja o arquivo LICENSE para mais informações.
+
+## 👤 Autor
+Rodrigo Angelo Evangelista - Desenvolvedor do Projeto
