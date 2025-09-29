@@ -2,7 +2,7 @@
 Uma aplicação de desktop simples e eficiente, construída com Electron, para padronizar e agilizar a criação de relatórios de passagem de plantão.
 
 ## 🖼️ Visão Geral
-O objetivo desta aplicação é fornecer aos técnicos uma ferramenta intuitiva para registrar as atividades do seu turno de trabalho. Com um formulário estruturado, o utilizador pode documentar agendamentos, tarefas, pendências e a movimentação de chamados, gerando ao final um arquivo .txt formatado e pronto para ser compartilhado.
+O objetivo desta aplicação é fornecer aos técnicos uma ferramenta intuitiva para registrar as atividades do seu turno de trabalho. Com um formulário estruturado, o utilizador pode documentar agendamentos, tarefas, pendências e a movimentação de chamados, gerando ao final um arquivo .txt formatado e pronto para ser compartilhado via Whatsapp Web.
 
 ## ✨ Funcionalidades
 Formulário Intuitivo: Interface limpa e organizada para preenchimento rápido das informações.
@@ -14,6 +14,8 @@ Contador de Chamados: Adicione ou remova facilmente a contagem de chamados abert
 Geração de Relatório: Crie um relatório de texto (.txt) padronizado com um único clique.
 
 Download Automático: O arquivo gerado é nomeado com a data atual e baixado automaticamente.
+
+Envio para Whatsapp Web, inserindo o número do contato escolhido.
 
 ## 🛠️ Tecnologias Utilizadas
 Este projeto foi construído utilizando as seguintes tecnologias:
