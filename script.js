@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // JÚNIOR: Lista ATUALIZADA de unidades de chamados
+    // Lista de unidades de chamados
     const unidadesChamados = [
-        "CER BARRA", "ÁLVARO RAMOS", "LOURENÇO JORGE", "NOSSA SENHORA DO LORETO", "ROCHA MAIA",
-        "SALGADO FILHO", "MATERNIDADE DA ROCINHA", "SEDE", "CIDADE DE DEUS", "COSTA BARROS",
-        "DEL CASTILHO", "ENGENHO DE DENTRO", "JOÃO XXIII", "MADUREIRA", "MAGALHÃES BASTOS",
-        "PACIÊNCIA", "ROCHA MIRANDA", "SENADOR CAMARÁ", "SEPETIBA", "VILA KENNEDY"
+        "UNIDADE 1", "UNIDADE 2", "UNIDADE 3", "UNIDADE CENTRAL", "UNIDADE AVANÇADA",
+        "DOCE SOBRINHO", "PATERNIDADE DA ONCINHA", "SEDE ADMINISTRATIVA", "CIDADE DOS HOMENS", "FRENTE ROCHA",
+        "EL PASTILHO", "ENGENHO DE FORA", "PIO XXV", "UNIDADE POSTERIOR"
     ];
 
     const chamadosAbertosContainer = document.getElementById('chamadosAbertosContainer');
@@ -14,18 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const chamadosFechadosInputs = {};
 
     const dataPlantaoInput = document.getElementById('dataPlantao');
-    // JÚNIOR: Preenche a data automaticamente no formato YYYY-MM-DD para o input type="date"
+    //Preenche a data automaticamente no formato YYYY-MM-DD para o input type="date"
     const today = new Date();
     const isoDate = today.toISOString().split('T')[0]; // Ex: "2025-07-14"
     dataPlantaoInput.value = isoDate;
 
-    // JÚNIOR: Pega a referência para o campo de seleção do técnico (do HTML)
+    //Pega a referência para o campo de seleção do técnico (do HTML)
     const tecnicoSelect = document.getElementById('tecnico');
     // Você pode definir um valor padrão aqui, se quiser, por exemplo:
-    // tecnicoSelect.value = "Rodrigo Angelo";
+    // tecnicoSelect.value = "FULANO DE TAL";
 
 
-    // JÚNIOR: FUNÇÃO GENÉRICA para criar os campos de chamados
+    //FUNÇÃO GENÉRICA para criar os campos de chamados
     function criarCamposChamados(container, inputsObject) {
         unidadesChamados.forEach(unidade => {
             const div = document.createElement('div');
@@ -73,24 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     document.getElementById('gerarRelatorioBtn').addEventListener('click', () => {
-        // JÚNIOR: Pega a data do input type="date" e formata para DD/MM/YYYY
+        // Pega a data do input type="date" e formata para DD/MM/YYYY
         const dataInput = dataPlantaoInput.value; // Ex: "2025-07-14"
         let dataFormatada = '';
         if (dataInput) {
-            const [year, month, day] = dataInput.split('-'); // Separa em partes
-            dataFormatada = `${day}/${month}/${year}`; // Monta no formato desejado
+            const [year, month, day] = dataInput.split('-'); 
+            dataFormatada = `${day}/${month}/${year}`;
         } else {
-            // JÚNIOR: Adiciona validação para garantir que a data foi selecionada
             alert('Por favor, selecione a data do plantão.');
-            return; // Impede a geração do relatório
+            return;
         }
 
-        // JÚNIOR: Pega o valor selecionado no <select> para o técnico
+       //Pega o valor selecionado no <select> para o técnico
         const tecnico = tecnicoSelect.value;
         if (!tecnico) {
-            // JÚNIOR: Adiciona validação para garantir que um técnico foi selecionado
             alert('Por favor, selecione o nome do técnico.');
-            return; // Impede a geração do relatório
+            return;
         }
 
         const plantao = document.getElementById('plantao').value;
@@ -122,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const chamadosFechadosTexto = formatarChamados(chamadosFechadosInputs, "Nenhum chamado fechado registrado.");
 
 
-        // JÚNIOR: Monta o texto final do relatório com a data e técnico corrigidos
+        // Monta o texto final do relatório com a data e técnico corrigidos
         const textoRelatorio = `Bom dia,
 
 Dia: ${dataFormatada}
