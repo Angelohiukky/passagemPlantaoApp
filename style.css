@@ -40,7 +40,7 @@ label {
 
 input[type="text"],
 textarea {
-    width: calc(100% - 20px); /* Ajusta a largura para considerar o padding */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -49,7 +49,7 @@ textarea {
 }
 
 textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
+    resize: vertical;
 }
 
 .chamado-item {
@@ -59,13 +59,13 @@ textarea {
 }
 
 .chamado-item label {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
     margin-right: 10px;
-    margin-bottom: 0; /* Remove a margem inferior padrão da label */
+    margin-bottom: 0; 
 }
 
 .chamado-item input[type="number"] {
-    width: 60px; /* Largura menor para o campo de número */
+    width: 60px;
     text-align: center;
     margin-right: 5px;
     padding: 8px;
@@ -103,12 +103,11 @@ textarea {
 #gerarRelatorioBtn:hover {
     background-color: #218838;
 }
-/* ... código CSS existente ... */
 
 input[type="text"],
-input[type="date"], /* JÚNIOR: Adicionado estilo para input[type="date"] */
+input[type="date"], 
 textarea,
-select { /* JÚNIOR: Adicionado estilo para select */
+select {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
@@ -116,5 +115,3 @@ select { /* JÚNIOR: Adicionado estilo para select */
     border-radius: 4px;
     font-size: 1em;
 }
-
-/* ... restante do código CSS ... */
