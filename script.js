@@ -171,8 +171,6 @@ ${movimentacaoEstoque || " "}
 
         alert(`Relatório "${nomeArquivoTxt}" gerado e baixado com sucesso!`);
 
-        // JÚNIOR: Toda a lógica de geração e download do arquivo .CSV foi removida daqui.
-        // A linha "alert(`Planilha "${nomeArquivoCsv}" gerada e baixada com sucesso!`);" também foi removida.
     });
 
 
